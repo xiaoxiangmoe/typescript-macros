@@ -1,0 +1,23 @@
+{
+  "name": "@-.-/uppercase.tsmacro",
+  "private": true,
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "source": "src/index.ts",
+  "repository": "https://github.com/xiaoxiangmoe/typescript-macros.git",
+  "author": "ZHAO Jinxiang <xiaoxiangmoe@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": " microbundle build --no-compress --strict --format=cjs,es",
+    "postbuild": "rm -rf .rts2_cache_*"
+  },
+  "dependencies": {
+    "typescript": "^3.2.1",
+    "typescript-macros": "*"
+  },
+  "devDependencies": {
+    "microbundle": "^0.7.0"
+  }
+}

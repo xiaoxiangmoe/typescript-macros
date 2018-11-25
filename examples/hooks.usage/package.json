@@ -1,0 +1,21 @@
+{
+  "name": "@-.-/hooks.usage",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config=rollup.config.js",
+    "postbuild": "rm -rf .rpt2_cache"
+  },
+  "devDependencies": {
+    "@types/react": "^16.7.8",
+    "@-.-/hooks.tsmacro": "*",
+    "rollup": "^0.67.3",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "typescript": "^3.2.1",
+    "typescript-macros": "*"
+  },
+  "dependencies": {
+    "react": "^16.7.0-alpha.2"
+  }
+}

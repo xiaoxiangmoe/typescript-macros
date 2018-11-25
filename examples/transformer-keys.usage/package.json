@@ -1,0 +1,17 @@
+{
+  "name": "@-.-/transformer-keys.usage",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config=rollup.config.js",
+    "postbuild": "rm -rf .rpt2_cache"
+  },
+  "devDependencies": {
+    "rollup": "^0.67.3",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "typescript": "^3.2.1",
+    "typescript-macros": "*",
+    "@-.-/transformer-keys.tsmacro": "*"
+  }
+}

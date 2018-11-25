@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "lerna": "lerna",
+    "publish": "lerna publish",
+    "precommit": "yarn lint",
+    "commit": "git-cz",
+    "build": "yarn workspaces run build",
+    "lint": "yarn run tslint",
+    "tslint": "tslint --config tslint.json packages/*/src/**/*.ts"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "commitizen": "^3.0.5",
+    "cz-moe": "^0.0.2",
+    "jest": "^23.6.0",
+    "lerna": "^3.5.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "tslint-immutable": "^5.0.0",
+    "tslint-microsoft-contrib": "^5.2.1",
+    "typescript": "^3.2.1",
+    "typescript-tslint-plugin": "^0.1.2"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
+}

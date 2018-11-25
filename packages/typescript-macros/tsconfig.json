@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsserver-plugin.tsconfig",
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["esnext"]
+  },
+}
