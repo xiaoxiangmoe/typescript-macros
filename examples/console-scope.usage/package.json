@@ -1,6 +1,6 @@
 {
   "name": "@-.-/console-scope.usage",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -8,10 +8,10 @@
     "postbuild": "rm -rf .rpt2_cache"
   },
   "devDependencies": {
+    "@-.-/console-scope.tsmacro": "^0.0.1-alpha.0",
     "rollup": "^0.67.3",
     "rollup-plugin-typescript2": "^0.18.0",
     "typescript": "^3.2.1",
-    "typescript-macros": "*",
-    "@-.-/console-scope.tsmacro": "*"
+    "typescript-macros": "^0.0.1-alpha.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@-.-/hooks.usage",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -8,12 +8,12 @@
     "postbuild": "rm -rf .rpt2_cache"
   },
   "devDependencies": {
+    "@-.-/hooks.tsmacro": "^0.0.1-alpha.0",
     "@types/react": "^16.7.8",
-    "@-.-/hooks.tsmacro": "*",
     "rollup": "^0.67.3",
     "rollup-plugin-typescript2": "^0.18.0",
     "typescript": "^3.2.1",
-    "typescript-macros": "*"
+    "typescript-macros": "^0.0.1-alpha.0"
   },
   "dependencies": {
     "react": "^16.7.0-alpha.2"
