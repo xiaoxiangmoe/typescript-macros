@@ -36,4 +36,5 @@ export const __typescriptMacroNodeTransformFunction: TypeScriptMacroNodeTransfor
       return ts.createStringLiteral(param.text.toUpperCase());
     }
   }
+  return node;
 };
