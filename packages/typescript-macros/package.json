@@ -13,12 +13,10 @@
     "postbuild": "rm -rf .rts2_cache_*"
   },
   "dependencies": {
-    "ramda": "^0.26.1",
     "tsutils": "^3.5.1",
     "typescript": "^3.2.1"
   },
   "devDependencies": {
-    "@types/ramda": "^0.25.42",
     "microbundle": "^0.7.0"
   }
 }
