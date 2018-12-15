@@ -11,10 +11,7 @@ import {
  * @param input only a StringLiteral
  * @returns lowercased StringLiteral
  */
-function lowercase(input: string): string {
-  console.error(new Error('no runtime output'));
-  return input.toLowerCase();
-}
+declare function lowercase(input: string): string;
 
 // export default will be ignored in generated js file
 // but it will still work in .d.ts file
