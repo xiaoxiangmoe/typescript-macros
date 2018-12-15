@@ -1,0 +1,18 @@
+{
+  "name": "@-.-/lowercase.usage.js",
+  "version": "0.0.1-alpha.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config=rollup.config.js",
+    "postbuild": "rm -rf .rpt2_cache"
+  },
+  "devDependencies": {
+    "@-.-/lowercase.macro": "^0.0.1-alpha.0",
+    "@babel/core": "^7.2.0",
+    "babel-plugin-macros": "^2.4.2",
+    "babel-plugin-preval": "^3.0.1",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.1.0"
+  }
+}

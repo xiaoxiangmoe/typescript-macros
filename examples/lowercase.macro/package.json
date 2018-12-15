@@ -1,0 +1,26 @@
+{
+  "name": "@-.-/lowercase.macro",
+  "private": true,
+  "version": "0.0.1-alpha.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "source": "src/index.ts",
+  "repository": "https://github.com/xiaoxiangmoe/typescript-macros.git",
+  "author": "ZHAO Jinxiang <xiaoxiangmoe@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config=rollup.config.js",
+    "postbuild": "rm -rf .rpt2_cache"
+  },
+  "dependencies": {
+    "babel-plugin-macros": "^2.4.2",
+    "typescript": "^3.2.1",
+    "typescript-macros": "^0.0.1-alpha.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.67.4",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-typescript2": "^0.18.1"
+  }
+}

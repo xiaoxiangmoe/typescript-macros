@@ -4,6 +4,7 @@ node_modules
 # microbundle cache
 .rts2_cache_*
 .rpt2_cache
+.cache
 
 dist
 coverage

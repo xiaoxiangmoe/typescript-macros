@@ -8,5 +8,5 @@ import * as ts from 'typescript';
  * @returns is it a macro import declaration
  */
 export function isMacroImportDeclaration(node: ts.ImportDeclaration) {
-  return /\.tsmacro(\"|\')$/.test(node.moduleSpecifier.getText());
+  return /\.(ts)?macro(\"|\')$/.test(node.moduleSpecifier.getText());
 }
