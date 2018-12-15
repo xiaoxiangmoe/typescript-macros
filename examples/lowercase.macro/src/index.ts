@@ -1,5 +1,10 @@
-import babel from './babel-lowercase';
-import __typescriptMacroNodeTransformFunction from './typescript-lowercase';
+import babelFunc from './babel-lowercase';
+import tsFunc from './typescript-lowercase';
+
+import {
+  exportBabelMacro,
+  exportTypeScriptMacro,
+} from '@-.-/interop-export-macros.tsmacro';
 
 /**
  * lowercase input string
@@ -11,6 +16,9 @@ function lowercase(input: string): string {
   return input.toLowerCase();
 }
 
-export default babel as typeof lowercase;
+// export default will be ignored in generated js file
+// but it will still work in .d.ts file
+export default lowercase;
 
-export { __typescriptMacroNodeTransformFunction };
+exportTypeScriptMacro(tsFunc);
+exportBabelMacro(babelFunc);

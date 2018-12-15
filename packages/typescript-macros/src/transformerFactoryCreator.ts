@@ -40,7 +40,11 @@ export const transformerFactoryCreator: TransformerFactoryCreator = languageServ
           node,
           languageService,
         });
-        return ret === undefined ? undefined : visitEachChild(ret, visitor);
+        return ret === undefined ||
+          ts.isExportAssignment(ret) ||
+          ts.isExportDeclaration(ret)
+          ? ret
+          : visitEachChild(ret, visitor);
       };
       return visitor;
     };
@@ -62,6 +66,5 @@ export const transformerFactoryCreator: TransformerFactoryCreator = languageServ
   return {
     before: [beforeTransformerFactory],
     after: [],
-    afterDeclarations: [],
   };
 };

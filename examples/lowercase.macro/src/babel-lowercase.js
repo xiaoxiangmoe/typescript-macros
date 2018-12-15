@@ -23,4 +23,4 @@ function lowercaseMacro({ references, state, babel, config }) {
   });
 }
 export default createMacro(lowercaseMacro);
-// export default createMacro;
+

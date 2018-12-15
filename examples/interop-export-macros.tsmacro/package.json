@@ -1,5 +1,5 @@
 {
-  "name": "@-.-/lowercase.macro",
+  "name": "@-.-/interop-export-macros.tsmacro",
   "private": true,
   "version": "0.0.1-alpha.0",
   "main": "dist/index.js",
@@ -10,18 +10,16 @@
   "author": "ZHAO Jinxiang <xiaoxiangmoe@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rollup --config=rollup.config.js",
-    "postbuild": "rm -rf .rpt2_cache"
+    "prebuild": "mv foo.tsconfig.json tsconfig.json",
+    "build": " microbundle build --no-compress --strict --format=cjs,es",
+    "postbuild": "rm -rf .rts2_cache_* && mv tsconfig.json foo.tsconfig.json"
   },
   "dependencies": {
-    "@-.-/interop-export-macros.tsmacro": "^0.0.1-alpha.0",
-    "babel-plugin-macros": "^2.4.2",
+    "tsutils": "^3.5.2",
     "typescript": "^3.2.1",
     "typescript-macros": "^0.0.1-alpha.0"
   },
   "devDependencies": {
-    "rollup": "^0.67.4",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-typescript2": "^0.18.1"
+    "microbundle": "^0.7.0"
   }
 }
