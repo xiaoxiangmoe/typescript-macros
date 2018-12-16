@@ -10,7 +10,7 @@
   "author": "ZHAO Jinxiang <xiaoxiangmoe@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": " microbundle build --no-compress --strict --format=cjs,es",
+    "build": " microbundle build --no-compress --strict --format=cjs,es && sed -i '' '/____$$$$____typescriptMacroNodeTransformFunction____$$$$____/d' ./dist/index.d.ts",
     "postbuild": "rm -rf .rts2_cache_*"
   },
   "dependencies": {

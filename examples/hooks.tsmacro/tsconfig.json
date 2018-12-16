@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
-    "lib": ["esnext"]
-  },
+    "lib": ["esnext"],
+    "declaration": true
+  }
 }

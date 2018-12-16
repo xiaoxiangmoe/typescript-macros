@@ -1,3 +1,4 @@
+import { exportTypeScriptMacro } from 'interop-export-macros.tsmacro';
 import * as ts from 'typescript';
 import { TypeScriptMacroNodeTransformFunction } from 'typescript-macros';
 
@@ -6,7 +7,7 @@ export function keys<T extends object>(): (keyof T)[] {
   return [];
 }
 
-export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeScriptMacroNodeTransformFunction = ({
+const transform: TypeScriptMacroNodeTransformFunction = ({
   reference,
   languageService,
   node,
@@ -34,3 +35,5 @@ export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeS
   }
   return node;
 };
+
+exportTypeScriptMacro(transform);

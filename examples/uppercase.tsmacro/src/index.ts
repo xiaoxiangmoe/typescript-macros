@@ -1,3 +1,4 @@
+import { exportTypeScriptMacro } from 'interop-export-macros.tsmacro';
 import * as ts from 'typescript';
 import { TypeScriptMacroNodeTransformFunction } from 'typescript-macros';
 
@@ -11,12 +12,9 @@ function uppercase(input: string): string {
   return input.toUpperCase();
 }
 
-// FIXME: this is a bug of micro bundle.
-// only can ex🦀️port default value by named ex🦀️port.
-// and can't include ex🦀️port keyword in comments.
 export { uppercase as default };
 
-export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeScriptMacroNodeTransformFunction = ({
+const transform: TypeScriptMacroNodeTransformFunction = ({
   reference,
   node,
 }) => {
@@ -38,3 +36,5 @@ export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeS
   }
   return node;
 };
+
+exportTypeScriptMacro(transform);

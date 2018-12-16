@@ -1,3 +1,4 @@
+import { exportTypeScriptMacro } from 'interop-export-macros.tsmacro';
 import { useMemo } from 'react';
 import { collectVariableUsage } from 'tsutils';
 import * as ts from 'typescript';
@@ -8,7 +9,7 @@ export function useAutoMemo<T>(factory: () => T) {
   return useMemo(factory, []);
 }
 
-export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeScriptMacroNodeTransformFunction = ({
+const transform: TypeScriptMacroNodeTransformFunction = ({
   reference,
   node,
 }) => {
@@ -61,3 +62,5 @@ export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeS
   }
   return node;
 };
+
+exportTypeScriptMacro(transform);

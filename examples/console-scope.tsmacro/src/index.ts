@@ -1,4 +1,4 @@
-import { ExpressionStatement } from 'estree';
+import { exportTypeScriptMacro } from 'interop-export-macros.tsmacro';
 import * as ts from 'typescript';
 import { TypeScriptMacroNodeTransformFunction } from 'typescript-macros';
 
@@ -6,12 +6,10 @@ function scope(): void {
   throw new Error('no runtime output');
 }
 
-// FIXME: this is a bug of micro bundle.
-// only can ex🦀️port default value by named ex🦀️port.
-// and can't include ex🦀️port keyword in comments.
+// warning: if we use export default, It will be ignored because export default if design for babel-plugin-macros
 export { scope as default };
 
-export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeScriptMacroNodeTransformFunction = ({
+const transform: TypeScriptMacroNodeTransformFunction = ({
   reference,
   node,
 }) => {
@@ -77,3 +75,5 @@ export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeS
 
   return node;
 };
+
+exportTypeScriptMacro(transform);

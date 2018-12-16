@@ -21,7 +21,6 @@
   "devDependencies": {
     "interop-export-macros.tsmacro": "^0.0.1-alpha.0",
     "rollup": "^0.67.4",
-    "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-typescript2": "^0.18.1"
   }
 }

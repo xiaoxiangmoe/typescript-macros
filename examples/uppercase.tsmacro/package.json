@@ -10,14 +10,15 @@
   "author": "ZHAO Jinxiang <xiaoxiangmoe@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": " microbundle build --no-compress --strict --format=cjs,es",
-    "postbuild": "rm -rf .rts2_cache_*"
+    "build": "rollup --config=rollup.config.js",
+    "postbuild": "rm -rf .rpt2_cache"
   },
   "dependencies": {
     "typescript": "^3.2.1",
     "typescript-macros": "^0.0.1-alpha.0"
   },
   "devDependencies": {
+    "interop-export-macros.tsmacro": "^0.0.1-alpha.0",
     "microbundle": "^0.7.0"
   }
 }
