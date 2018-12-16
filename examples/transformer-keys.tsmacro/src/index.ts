@@ -6,7 +6,7 @@ export function keys<T extends object>(): (keyof T)[] {
   return [];
 }
 
-export const __typescriptMacroNodeTransformFunction: TypeScriptMacroNodeTransformFunction = ({
+export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeScriptMacroNodeTransformFunction = ({
   reference,
   languageService,
   node,

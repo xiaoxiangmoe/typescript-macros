@@ -1,37 +1,23 @@
 import * as ts from 'typescript';
 import { TypeScriptMacroNodeTransformFunction } from 'typescript-macros';
 
-import { collectVariableUsage } from 'tsutils';
+/**
+ * It will export babel macro for users
+ * @param babelMacroFunction
+ */
+function exportBabelMacro(babelMacroFunction: Function): void {}
 
 /**
- * uppercase input string
- * @param input only a StringLiteral
- * @returns uppercased StringLiteral
+ * It will export typescript macro for users
+ * @param tsMacroFunction
  */
-function uppercase(input: string): string {
-  console.error(new Error('no runtime output'));
-  return input.toUpperCase();
-}
+function exportTypeScriptMacro(
+  tsMacroFunction: TypeScriptMacroNodeTransformFunction,
+): void {}
 
-// FIXME: this is a bug of micro bundle.
-// only can ex🦀️port default value by named ex🦀️port.
-// and can't include ex🦀️port keyword in comments.
-export { uppercase as default };
+export { exportBabelMacro, exportTypeScriptMacro };
 
-function isLastStatementInSourceFile(node: ts.Node) {
-  if (!ts.isSourceFile(node.parent)) {
-    throw new Error('parent is not SourceFile');
-  }
-  const { statements } = node.parent;
-  return statements[statements.length - 1] === node;
-}
-export function exportBabelMacro(a: any) {
-  return;
-}
-export function exportTypeScriptMacro(a: any) {
-  return;
-}
-export const __typescriptMacroNodeTransformFunction: TypeScriptMacroNodeTransformFunction = ({
+export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeScriptMacroNodeTransformFunction = ({
   reference,
   node,
 }) => {
@@ -64,7 +50,7 @@ export const __typescriptMacroNodeTransformFunction: TypeScriptMacroNodeTransfor
             ts.createNamedExports([
               ts.createExportSpecifier(
                 arg.text,
-                '__typescriptMacroNodeTransformFunction',
+                '____$$$$____typescriptMacroNodeTransformFunction____$$$$____',
               ),
             ]),
           )

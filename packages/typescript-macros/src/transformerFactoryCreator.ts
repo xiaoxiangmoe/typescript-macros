@@ -53,7 +53,7 @@ export const transformerFactoryCreator: TransformerFactoryCreator = languageServ
     const imDeclarations = getMacroImportDeclarations(node).map(x => ({
       bindings: getBindingIdentifiers(x),
       transFunc: require(x.moduleSpecifier.getText().slice(1, -1))
-        .__typescriptMacroNodeTransformFunction as TypeScriptMacroNodeTransformFunction
+        .____$$$$____typescriptMacroNodeTransformFunction____$$$$____ as TypeScriptMacroNodeTransformFunction
       /* Magic number 1 and -1 is for remove leading and ending quote */
     }));
     const a = imDeclarations.reduce(

@@ -8,7 +8,7 @@ export function useAutoMemo<T>(factory: () => T) {
   return useMemo(factory, []);
 }
 
-export const __typescriptMacroNodeTransformFunction: TypeScriptMacroNodeTransformFunction = ({
+export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeScriptMacroNodeTransformFunction = ({
   reference,
   node,
 }) => {

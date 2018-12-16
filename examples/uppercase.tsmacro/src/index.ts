@@ -16,7 +16,7 @@ function uppercase(input: string): string {
 // and can't include ex🦀️port keyword in comments.
 export { uppercase as default };
 
-export const __typescriptMacroNodeTransformFunction: TypeScriptMacroNodeTransformFunction = ({
+export const ____$$$$____typescriptMacroNodeTransformFunction____$$$$____: TypeScriptMacroNodeTransformFunction = ({
   reference,
   node,
 }) => {

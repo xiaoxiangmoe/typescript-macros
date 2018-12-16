@@ -4,7 +4,7 @@ import tsFunc from './typescript-lowercase';
 import {
   exportBabelMacro,
   exportTypeScriptMacro,
-} from '@-.-/interop-export-macros.tsmacro';
+} from 'interop-export-macros.tsmacro';
 
 /**
  * lowercase input string

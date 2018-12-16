@@ -23,7 +23,8 @@
     "typescript-tslint-plugin": "^0.1.2"
   },
   "workspaces": [
-    "packages/*",
+    "packages/typescript-macros",
+    "packages/interop-export-macros.tsmacro",
     "examples/*"
   ]
 }

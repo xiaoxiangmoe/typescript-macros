@@ -1,5 +1,5 @@
 {
-  "name": "@-.-/interop-export-macros.tsmacro",
+  "name": "interop-export-macros.tsmacro",
   "private": true,
   "version": "0.0.1-alpha.0",
   "main": "dist/index.js",
@@ -10,12 +10,10 @@
   "author": "ZHAO Jinxiang <xiaoxiangmoe@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prebuild": "mv foo.tsconfig.json tsconfig.json",
     "build": " microbundle build --no-compress --strict --format=cjs,es",
-    "postbuild": "rm -rf .rts2_cache_* && mv tsconfig.json foo.tsconfig.json"
+    "postbuild": "rm -rf .rts2_cache_*"
   },
   "dependencies": {
-    "tsutils": "^3.5.2",
     "typescript": "^3.2.1",
     "typescript-macros": "^0.0.1-alpha.0"
   },
