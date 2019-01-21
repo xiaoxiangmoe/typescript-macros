@@ -1,0 +1,30 @@
+---
+name: Usage for users
+route: /users
+order: -1
+sidebar: true
+---
+
+# `typescript-macros` Usage for users
+
+## Configuring rollup
+
+Adding the transformers to your rollup-plugin-typescript2
+
+```js
+import typescript from 'rollup-plugin-typescript2';
+import { transformerFactoryCreator } from 'typescript-macros';
+
+export default {
+  ...otherConfig,
+  plugins: [typescript({ transformers: [transformerFactoryCreator] })]
+};
+```
+
+## Using a macro
+
+```ts
+import lowercase from '@-.-/lowercase.macro';
+
+const ddf = lowercase('DEEP DARK FANTACY!');
+```

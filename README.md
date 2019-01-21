@@ -6,6 +6,8 @@ Add macros for TypeScript
 
 ⚠️ WARNING: This project is still under development
 
+[docs](https://xiaoxiangmoe.github.io/typescript-macros)
+
 ## development tutorial
 
 ```sh

@@ -1,0 +1,1 @@
+# Documents for TypeScript Macros

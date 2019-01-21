@@ -1,0 +1,75 @@
+---
+name: Usage for macros authors
+route: /authors
+order: -2
+sidebar: true
+---
+
+# `typescript-macros` Usage for macros authors
+
+## Writing a macro
+
+A macro is a TypeScript module that exports a transform function by another macro(`interop-export-macros.tsmacro`). Here's a simple example:
+
+```ts
+import { exportTypeScriptMacro } from 'interop-export-macros.tsmacro';
+import * as ts from 'typescript';
+import { TypeScriptMacroNodeTransformFunction } from 'typescript-macros';
+
+/**
+ * this function will generate function type in`.d.ts` file for us.
+ * ` declare function uppercase(input: string): string; `
+ */
+export function uppercase(input: string): string {
+  throw new Error('no runtime output');
+}
+
+const transform: TypeScriptMacroNodeTransformFunction = ({
+  reference,
+  node
+}) => {
+  // convert your node to another node here.
+  // refrence should input a node and it will return
+  // * false if this node is not an identifier imported by this macros
+  // * string if this node is an identifier mported by this macros.
+  //   the string stands for the import name
+  return node;
+};
+
+// `exportTypeScriptMacro` is a macro function that generate export function
+// we can writing other self-define macro methods to export macros in the future.
+exportTypeScriptMacro(transform);
+```
+
+## Filename
+
+The way that babel-plugin-macros determines whether to run a macro is based on the source string of the import or require statement.
+It must match this regex: `/\.(ts)?macro$/` for example:
+
+- matches:
+
+```
+'my.macro'
+'my.tsmacro'
+```
+
+- does not match:
+
+```
+'my-macro'
+'my.macro.is-sweet'
+'my/macro/rocks'
+'my.macro.js'
+'my.macro.ts'
+```
+
+maybe we'll support more `my.macro.ts` in the future.
+
+## Helpful Tools
+
+- [tsutils](https://github.com/ajafff/tsutils): Utility functions for working with typescript's AST
+- [ts-creator](https://github.com/HearTao/ts-creator): A code generator to generate TypeScript code generator from TypeScript code
+
+## Examples
+
+see https://github.com/xiaoxiangmoe/typescript-macros/tree/master/examples

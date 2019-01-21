@@ -5,6 +5,7 @@
     "publish": "lerna publish",
     "precommit": "yarn lint",
     "commit": "git-cz",
+    "test": "echo 'test is just build in this project' && yarn run build",
     "build": "yarn workspaces run build",
     "lint": "yarn run tslint",
     "tslint": "tslint --config tslint.json packages/*/src/**/*.ts"
@@ -19,12 +20,13 @@
     "tslint": "^5.11.0",
     "tslint-immutable": "^5.0.0",
     "tslint-microsoft-contrib": "^5.2.1",
-    "typescript": "^3.2.1",
+    "typescript": "^3.2.4",
     "typescript-tslint-plugin": "^0.1.2"
   },
   "workspaces": [
     "packages/typescript-macros",
     "packages/interop-export-macros.tsmacro",
-    "examples/*"
+    "examples/*",
+    "docs"
   ]
 }

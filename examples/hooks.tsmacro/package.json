@@ -15,18 +15,18 @@
   },
   "dependencies": {
     "tsutils": "^3.5.1",
-    "typescript": "^3.2.1",
+    "typescript": "^3.2.4",
     "typescript-macros": "^0.0.1-alpha.0"
   },
   "devDependencies": {
-    "@types/react": "^16.7.8",
+    "@types/react": "^16.7.20",
     "interop-export-macros.tsmacro": "^0.0.1-alpha.0",
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2",
-    "rollup": "^0.67.4",
-    "rollup-plugin-typescript2": "^0.18.1"
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1",
+    "rollup": "^1.1.2",
+    "rollup-plugin-typescript2": "^0.19.2"
   },
   "peerDependencies": {
-    "react": "^16.7.0-alpha.2"
+    "react": "^16.8.0-alpha.1"
   }
 }

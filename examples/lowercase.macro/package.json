@@ -14,13 +14,13 @@
     "postbuild": "rm -rf .rpt2_cache"
   },
   "dependencies": {
-    "babel-plugin-macros": "^2.4.2",
-    "typescript": "^3.2.1",
+    "babel-plugin-macros": "^2.4.5",
+    "typescript": "^3.2.4",
     "typescript-macros": "^0.0.1-alpha.0"
   },
   "devDependencies": {
     "interop-export-macros.tsmacro": "^0.0.1-alpha.0",
-    "rollup": "^0.67.4",
-    "rollup-plugin-typescript2": "^0.18.1"
+    "rollup": "^1.1.2",
+    "rollup-plugin-typescript2": "^0.19.2"
   }
 }

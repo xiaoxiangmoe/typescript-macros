@@ -14,10 +14,10 @@
     "postbuild": "rm -rf .rts2_cache_*"
   },
   "dependencies": {
-    "typescript": "^3.2.1",
+    "typescript": "^3.2.4",
     "typescript-macros": "^0.0.1-alpha.0"
   },
   "devDependencies": {
-    "microbundle": "^0.7.0"
+    "microbundle": "^0.9.0"
   }
 }

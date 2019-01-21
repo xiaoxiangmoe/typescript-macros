@@ -13,10 +13,10 @@
     "postbuild": "rm -rf .rts2_cache_*"
   },
   "dependencies": {
-    "tsutils": "^3.5.1",
-    "typescript": "^3.2.1"
+    "tsutils": "^3.7.0",
+    "typescript": "^3.2.4"
   },
   "devDependencies": {
-    "microbundle": "^0.7.0"
+    "microbundle": "^0.9.0"
   }
 }
