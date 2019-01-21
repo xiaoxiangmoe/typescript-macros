@@ -1,0 +1,17 @@
+{
+  "vendors.js": "./static/js/vendors.7ede52c1.js",
+  "vendors.js.map": "./static/js/vendors.318f65c37a637f158341.js.map",
+  "app.js": "./static/js/app.911ea589.js",
+  "app.js.map": "./static/js/app.318f65c37a637f158341.js.map",
+  "runtime~app.js": "./static/js/runtime~app.318f65c37a637f158341.js",
+  "runtime~app.js.map": "./static/js/runtime~app.318f65c37a637f158341.js.map",
+  "src-author.js": "./static/js/src-author.31549275.js",
+  "src-author.js.map": "./static/js/src-author.318f65c37a637f158341.js.map",
+  "src-index.js": "./static/js/src-index.0176b211.js",
+  "src-index.js.map": "./static/js/src-index.318f65c37a637f158341.js.map",
+  "src-user.js": "./static/js/src-user.7f38dacc.js",
+  "src-user.js.map": "./static/js/src-user.318f65c37a637f158341.js.map",
+  "static/js/6.8b835ddc.js": "./static/js/6.8b835ddc.js",
+  "static/js/6.318f65c37a637f158341.js.map": "./static/js/6.318f65c37a637f158341.js.map",
+  "index.html": "./index.html"
+}
